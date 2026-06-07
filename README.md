@@ -1,42 +1,21 @@
-# 華興池埤塘觀察網站
+# 華興池生態埤塘導覽
 
-這是一份以「華興池埤塘」為主題的靜態網頁專案，內容包含首頁輪播、埤塘介紹、植物觀察卡片、含羞草觀察筆記與攝影牆頁面。專案使用 HTML 與 CSS 製作，不需要額外安裝套件或進行編譯。
+這是「運算思維與程式設計」期末網頁作業。網站以華興池生態埤塘為主題，整理地圖、植物觀察與田野照片。
 
-## 專案內容
+## 網頁結構
 
-- `index.html`：首頁，包含華興池風景輪播。
-- `index_01.html`：基礎網頁骨架練習頁。
-- `index_02.html`：兩層導覽列練習頁。
-- `index_03.html`：側邊欄配置練習頁。
-- `index_04.html`：埤塘文章內容頁。
-- `grass_list.html`：小草名錄卡片頁。
-- `mimosa.html`：含羞草深度介紹頁。
-- `grass_gallery.html`：田野觀察攝影牆。
-- `assets/styles.css`：網站共用樣式。
-- `assets/images/`：網站使用的圖片素材。
-- `observations.md`：各階段製作與觀察筆記。
+- `index.html`：首頁與照片輪播。
+- `about.html`：主題介紹與網站架構。
+- `pond-map.html`：華興池位置、Google 地圖與觀察重點。
+- `plants.html`：植物名錄卡片頁。
+- `mimosa.html`：含羞草觀察筆記。
+- `clover.html`：酢漿草觀察筆記。
+- `plantain.html`：車前草觀察筆記。
+- `field-gallery.html`：田野照片牆。
+- `navigation-demo.html`、`side-layout-demo.html`：保留早期版面練習紀錄，不是主要繳交入口。
 
-## 執行方式
+## 繳交說明
 
-可以直接用瀏覽器開啟 `index.html`，也可以在專案根目錄啟動本機伺服器：
+i-learning 的期末作業要求是貼上已上傳到 GitHub 的網站 URL。發布到 GitHub Pages 後，繳交網址通常會是：
 
-```bash
-python3 -m http.server 8000
-```
-
-啟動後打開：
-
-```text
-http://localhost:8000/
-```
-
-## 技術重點
-
-- 使用語意化 HTML 結構整理頁面內容。
-- 使用 CSS Grid 與 Flexbox 製作響應式版面。
-- 導覽列、卡片、文章頁與攝影牆共用一致的視覺樣式。
-- 首頁使用少量 JavaScript 製作圖片輪播與指示點切換。
-
-## 專案目的
-
-本專案用來練習靜態網站的基本架構、響應式設計、導覽列、圖片版面與文字內容整理，並以華興池埤塘周邊觀察作為網頁主題。
+`https://gazmo-0924.github.io/hua_xin/`

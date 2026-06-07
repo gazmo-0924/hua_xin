@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>導覽列練習紀錄</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>導覽列練習紀錄</h1>
+    <p>保留兩層選單練習，正式內容請回首頁瀏覽</p>
+  </header>
+
+  <nav class="top-nav" aria-label="主要選單">
+    <ul class="menu">
+      <li><a href="about.html">關於</a></li>
+      <li><a href="pond-map.html">埤塘地圖</a></li>
+      <li class="has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false">植物觀察</button>
+        <ul class="submenu">
+          <li><a href="plants.html">植物名錄</a></li>
+          <li><a href="mimosa.html">含羞草</a></li>
+          <li><a href="clover.html">酢漿草</a></li>
+          <li><a href="plantain.html">車前草</a></li>
+        </ul>
+      </li>
+      <li><a href="field-gallery.html">田野照片</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <section class="panel">
+      <h2>兩層選單</h2>
+      <p>這頁是早期練習紀錄，最後網站已經把「植物觀察」整理成第二層選單，並連到三個植物細節頁。</p>
+      <a class="button" href="index.html">回到首頁</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>華興池埤塘期末網頁作業</p>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

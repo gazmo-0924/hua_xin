@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>華興池埤塘首頁</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>華興池埤塘觀察</h1>
+    <p>用照片輪播呈現埤塘的第一印象</p>
+  </header>
+
+  <nav class="top-nav" aria-label="主要選單">
+    <ul class="menu">
+      <li><a href="index_01.html">關於</a></li>
+      <li><a href="index_04.html">埤塘介紹</a></li>
+      <li><a href="grass_list.html">植物觀察</a></li>
+      <li><a href="grass_gallery.html">動物觀察</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <section class="slider" aria-label="華興池風景輪播">
+      <div class="slides">
+        <article class="slide is-active">
+          <img src="assets/images/pond-hero-1.png" alt="清晨的華興池埤塘風景">
+          <div class="slide-caption">
+            <h2>清晨水面</h2>
+            <p>陽光剛照到水邊，埤塘看起來安靜又清楚。</p>
+          </div>
+        </article>
+        <article class="slide">
+          <img src="assets/images/pond-hero-2.png" alt="午後的華興池池畔步道">
+          <div class="slide-caption">
+            <h2>池畔步道</h2>
+            <p>沿著步道走，可以同時觀察水域與草地。</p>
+          </div>
+        </article>
+        <article class="slide">
+          <img src="assets/images/pond-hero-3.png" alt="傍晚的華興池埤塘與植物">
+          <div class="slide-caption">
+            <h2>傍晚草影</h2>
+            <p>光線變柔和時，植物的形狀更容易被看見。</p>
+          </div>
+        </article>
+      </div>
+      <button class="slider-arrow prev" type="button" aria-label="上一張">&lsaquo;</button>
+      <button class="slider-arrow next" type="button" aria-label="下一張">&rsaquo;</button>
+      <div class="dots" aria-label="輪播指示燈">
+        <button class="dot is-active" type="button" aria-label="第 1 張"></button>
+        <button class="dot" type="button" aria-label="第 2 張"></button>
+        <button class="dot" type="button" aria-label="第 3 張"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>華興池埤塘網頁作業</p>
+  </footer>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const dots = Array.from(document.querySelectorAll(".dot"));
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    let currentIndex = 0;
+    let timerId;
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("is-active", slideIndex === currentIndex);
+      });
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === currentIndex);
+      });
+    }
+
+    function restartTimer() {
+      clearInterval(timerId);
+      timerId = setInterval(() => showSlide(currentIndex + 1), 4000);
+    }
+
+    prevButton.addEventListener("click", () => {
+      showSlide(currentIndex - 1);
+      restartTimer();
+    });
+
+    nextButton.addEventListener("click", () => {
+      showSlide(currentIndex + 1);
+      restartTimer();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showSlide(index);
+        restartTimer();
+      });
+    });
+
+    restartTimer();
+  </script>
+</body>
+</html>

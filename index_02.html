@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第二階段：兩層導覽列</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>華興池埤塘觀察</h1>
+    <p>用父子層級整理選單內容</p>
+  </header>
+
+  <nav class="top-nav" aria-label="主要選單">
+    <ul class="menu">
+      <li><a href="index_01.html">關於</a></li>
+      <li><a href="index_04.html">埤塘介紹</a></li>
+      <li class="has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false">植物觀察</button>
+        <ul class="submenu">
+          <li><a href="grass_list.html">小草</a></li>
+          <li><a href="#">大樹</a></li>
+          <li><a href="#">花</a></li>
+        </ul>
+      </li>
+      <li><a href="grass_gallery.html">動物觀察</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <section class="panel">
+      <h2>兩層選單</h2>
+      <p>「植物觀察」是第一層，裡面包住「小草、大樹、花」三個第二層項目。</p>
+      <p class="section-note">電腦版可以用滑鼠移上去看子選單，手機版可以用點擊打開或收合。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>華興池埤塘網頁作業</p>
+  </footer>
+
+  <script>
+    const submenuButton = document.querySelector(".submenu-toggle");
+    const submenuItem = document.querySelector(".has-submenu");
+
+    submenuButton.addEventListener("click", () => {
+      const isOpen = submenuItem.classList.toggle("is-open");
+      submenuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+  </script>
+</body>
+</html>

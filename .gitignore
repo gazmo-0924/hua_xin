@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local browser/test artifacts
+browser-check-*.png
+
+# Business or legal documents should not be committed by default.
+*合約*
+*契約*
+*協議*
+*報價*
+*報價單*
+*contract*
+*agreement*
+*quotation*

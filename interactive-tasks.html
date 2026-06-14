@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>華興池互動任務</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>互動任務</h1>
+    <p>用選擇題、填充題和分類小遊戲複習華興池內容</p>
+  </header>
+
+  <nav class="top-nav" aria-label="主要選單">
+    <ul class="menu">
+      <li><a href="about.html">關於</a></li>
+      <li><a href="pond-map.html">地圖</a></li>
+      <li><a href="history-culture.html">歷史與文化</a></li>
+      <li><a href="ecology.html">生態調查</a></li>
+      <li><a href="landscape-water.html">地景與水利</a></li>
+      <li><a href="changes-current.html">變遷與現狀</a></li>
+      <li><a href="conservation-future.html">保育與未來</a></li>
+      <li><a class="is-current" href="interactive-tasks.html">互動任務</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <article class="article-card">
+      <h1>任務說明</h1>
+      <p>完成下面三種任務，可以檢查自己是否理解華興池的地圖、歷史、生態、水利與保育重點。答錯也沒關係，可以回到各章節重新閱讀。</p>
+    </article>
+
+    <section class="content-section" aria-labelledby="choice-quiz">
+      <h2 id="choice-quiz">選擇題</h2>
+      <div class="quiz-grid">
+        <article class="quiz-card" data-answer="b">
+          <h3>1. 華興池現在最適合被理解成哪一種空間？</h3>
+          <div class="choice-list" role="group" aria-label="第 1 題選項">
+            <button type="button" data-choice="a">只用來拍照的景點</button>
+            <button type="button" data-choice="b">兼具水利、生態與休閒的埤塘公園</button>
+            <button type="button" data-choice="c">完全沒有水利功能的人工湖</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </article>
+
+        <article class="quiz-card" data-answer="a">
+          <h3>2. 下列哪一項最能幫助水生昆蟲與鳥類使用埤塘？</h3>
+          <div class="choice-list" role="group" aria-label="第 2 題選項">
+            <button type="button" data-choice="a">保留水生植物、岸邊草地與安靜棲地</button>
+            <button type="button" data-choice="b">把所有水岸都鋪成硬鋪面</button>
+            <button type="button" data-choice="c">讓遊客任意餵食動物</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </article>
+
+        <article class="quiz-card" data-answer="c">
+          <h3>3. 若水面長期被藻類或漂浮植物覆蓋，可能代表什麼問題？</h3>
+          <div class="choice-list" role="group" aria-label="第 3 題選項">
+            <button type="button" data-choice="a">水質一定完全正常</button>
+            <button type="button" data-choice="b">水中完全沒有養分</button>
+            <button type="button" data-choice="c">養分過多或水體流動性不足</button>
+          </div>
+          <p class="feedback" aria-live="polite"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="fill-quiz">
+      <h2 id="fill-quiz">填充題</h2>
+      <div class="quiz-grid">
+        <article class="fill-card">
+          <h3>1. 桃園因為有許多埤塘，常被稱為「____」。</h3>
+          <button class="button reveal-answer" type="button">顯示答案</button>
+          <p class="answer" hidden>參考答案：千塘之鄉</p>
+        </article>
+        <article class="fill-card">
+          <h3>2. 華興池曾屬於桃園大圳第 6 支渠第 ____ 號池。</h3>
+          <button class="button reveal-answer" type="button">顯示答案</button>
+          <p class="answer" hidden>參考答案：12</p>
+        </article>
+        <article class="fill-card">
+          <h3>3. 保育水岸時，除了讓人親近，也要保留給動植物使用的 ____。</h3>
+          <button class="button reveal-answer" type="button">顯示答案</button>
+          <p class="answer" hidden>參考答案：棲地</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="mini-game">
+      <h2 id="mini-game">小遊戲：分類觀察項目</h2>
+      <div class="game-card" data-game="category">
+        <p>把每個觀察項目分類到最適合的主題，再按下檢查答案。</p>
+        <div class="match-list">
+          <label>
+            <span>含羞草、酢漿草、車前草</span>
+            <select data-answer="plant">
+              <option value="">選擇分類</option>
+              <option value="plant">植物</option>
+              <option value="water">水利</option>
+              <option value="future">保育</option>
+            </select>
+          </label>
+          <label>
+            <span>溢流口、蓄水、排水</span>
+            <select data-answer="water">
+              <option value="">選擇分類</option>
+              <option value="plant">植物</option>
+              <option value="water">水利</option>
+              <option value="future">保育</option>
+            </select>
+          </label>
+          <label>
+            <span>不餵食、不採集、不驚擾</span>
+            <select data-answer="future">
+              <option value="">選擇分類</option>
+              <option value="plant">植物</option>
+              <option value="water">水利</option>
+              <option value="future">保育</option>
+            </select>
+          </label>
+        </div>
+        <button class="button check-game" type="button">檢查答案</button>
+        <p class="game-feedback" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>華興池埤塘期末網頁作業</p>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

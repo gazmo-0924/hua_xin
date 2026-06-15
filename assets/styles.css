@@ -429,6 +429,7 @@ blockquote {
 
 .feature-grid,
 .topic-grid,
+.species-grid,
 .quiz-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -438,6 +439,7 @@ blockquote {
 
 .feature-card,
 .topic-card,
+.species-card,
 .source-box,
 .quiz-card,
 .fill-card,
@@ -450,6 +452,7 @@ blockquote {
 
 .feature-card,
 .topic-card,
+.species-card,
 .source-box,
 .quiz-card,
 .fill-card,
@@ -466,6 +469,7 @@ blockquote {
 
 .feature-card h2,
 .topic-card h3,
+.species-card h3,
 .quiz-card h3,
 .fill-card h3,
 .game-card p {
@@ -473,8 +477,56 @@ blockquote {
 }
 
 .feature-card p,
-.topic-card p {
+.topic-card p,
+.species-card p {
   color: var(--muted);
+}
+
+.species-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.species-card figure {
+  margin: 0;
+}
+
+.species-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.species-card figcaption {
+  padding: 10px 16px;
+  background: #f7faf4;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.species-card-body {
+  padding: 18px;
+}
+
+.species-card h3 {
+  margin: 0 0 10px;
+}
+
+.species-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.species-meta span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #edf4e9;
+  color: var(--green-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .content-section {
@@ -563,18 +615,48 @@ blockquote {
 }
 
 .feedback,
+.fill-feedback,
 .game-feedback,
 .answer {
   margin: 14px 0 0;
   font-weight: 700;
 }
 
+.fill-answer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.fill-answer-row span {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.fill-card input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--text);
+  font: inherit;
+}
+
+.fill-card input:focus {
+  border-color: var(--green);
+}
+
 .feedback.is-correct,
+.fill-feedback.is-correct,
 .game-feedback.is-correct {
   color: var(--green-dark);
 }
 
 .feedback.is-wrong,
+.fill-feedback.is-wrong,
 .game-feedback.is-wrong {
   color: #8f3c2f;
 }
@@ -826,6 +908,7 @@ blockquote {
   }
 
   .topic-grid,
+  .species-grid,
   .quiz-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -865,6 +948,7 @@ blockquote {
   .visual-intro-copy,
   .feature-card,
   .topic-card,
+  .species-card-body,
   .source-box,
   .quiz-card,
   .fill-card,

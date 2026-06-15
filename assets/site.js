@@ -107,6 +107,38 @@ revealButtons.forEach((button) => {
   });
 });
 
+const fillCheckButtons = Array.from(document.querySelectorAll(".check-fill"));
+
+function normalizeAnswer(value) {
+  return value.trim().replace(/\s+/g, "").toLowerCase();
+}
+
+fillCheckButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".fill-card");
+    const input = card ? card.querySelector("input[data-answer]") : null;
+    const feedback = card ? card.querySelector(".fill-feedback") : null;
+
+    if (!input || !feedback) {
+      return;
+    }
+
+    const userAnswer = normalizeAnswer(input.value);
+    const acceptedAnswers = input.dataset.answer.split("|").map(normalizeAnswer);
+    const isCorrect = acceptedAnswers.includes(userAnswer);
+
+    feedback.classList.toggle("is-correct", isCorrect);
+    feedback.classList.toggle("is-wrong", !isCorrect);
+
+    if (!userAnswer) {
+      feedback.textContent = "請先輸入答案。";
+      return;
+    }
+
+    feedback.textContent = isCorrect ? "答對了！" : "答案還不對，可以按顯示答案或回前面章節查找。";
+  });
+});
+
 const gameCards = Array.from(document.querySelectorAll('.game-card[data-game="category"]'));
 
 gameCards.forEach((card) => {

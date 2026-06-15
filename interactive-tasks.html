@@ -14,6 +14,7 @@
 
   <nav class="top-nav" aria-label="主要選單">
     <ul class="menu">
+      <li><a href="index.html">首頁</a></li>
       <li><a href="about.html">關於</a></li>
       <li><a href="pond-map.html">地圖</a></li>
       <li><a href="history-culture.html">歷史與文化</a></li>
@@ -84,17 +85,35 @@
       <div class="quiz-grid">
         <article class="fill-card">
           <h3>1. 桃園因為有許多埤塘，常被稱為「____」。</h3>
-          <button class="button reveal-answer" type="button">顯示答案</button>
+          <label class="fill-answer-row">
+            <span>你的答案</span>
+            <input type="text" data-answer="千塘之鄉" autocomplete="off" placeholder="請輸入答案">
+          </label>
+          <button class="button check-fill" type="button">檢查答案</button>
+          <button class="button secondary-button reveal-answer" type="button">顯示答案</button>
+          <p class="fill-feedback" aria-live="polite"></p>
           <p class="answer" hidden>參考答案：千塘之鄉</p>
         </article>
         <article class="fill-card">
           <h3>2. 華興池曾屬於桃園大圳第 6 支渠第 ____ 號池。</h3>
-          <button class="button reveal-answer" type="button">顯示答案</button>
+          <label class="fill-answer-row">
+            <span>你的答案</span>
+            <input type="text" data-answer="12|十二" autocomplete="off" placeholder="請輸入數字或中文數字">
+          </label>
+          <button class="button check-fill" type="button">檢查答案</button>
+          <button class="button secondary-button reveal-answer" type="button">顯示答案</button>
+          <p class="fill-feedback" aria-live="polite"></p>
           <p class="answer" hidden>參考答案：12</p>
         </article>
         <article class="fill-card">
           <h3>3. 保育水岸時，除了讓人親近，也要保留給動植物使用的 ____。</h3>
-          <button class="button reveal-answer" type="button">顯示答案</button>
+          <label class="fill-answer-row">
+            <span>你的答案</span>
+            <input type="text" data-answer="棲地|栖地" autocomplete="off" placeholder="請輸入答案">
+          </label>
+          <button class="button check-fill" type="button">檢查答案</button>
+          <button class="button secondary-button reveal-answer" type="button">顯示答案</button>
+          <p class="fill-feedback" aria-live="polite"></p>
           <p class="answer" hidden>參考答案：棲地</p>
         </article>
       </div>

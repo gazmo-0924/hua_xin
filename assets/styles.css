@@ -408,6 +408,11 @@ blockquote {
   font-size: 0.95rem;
 }
 
+.source-note a {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
 .intro-band {
   margin-top: 24px;
   padding: 26px;
@@ -554,6 +559,39 @@ blockquote {
 
 .timeline-list li {
   padding-left: 4px;
+}
+
+.media-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.media-card {
+  overflow: hidden;
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.media-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.media-card figcaption {
+  padding: 14px 16px;
+  color: var(--muted);
+}
+
+.media-card figcaption strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
 }
 
 .source-box {
@@ -747,7 +785,7 @@ blockquote {
   position: absolute;
   left: 18px;
   right: 18px;
-  bottom: 18px;
+  bottom: 48px;
   max-width: 560px;
   padding: 18px;
   border-radius: 8px;
@@ -909,7 +947,8 @@ blockquote {
 
   .topic-grid,
   .species-grid,
-  .quiz-grid {
+  .quiz-grid,
+  .media-card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -953,7 +992,8 @@ blockquote {
   .quiz-card,
   .fill-card,
   .game-card,
-  .intro-band {
+  .intro-band,
+  .media-card figcaption {
     padding: 18px;
   }
 
